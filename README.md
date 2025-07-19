@@ -4,11 +4,7 @@ A beautiful, responsive, and beginner-friendly weather forecast app built using 
 
 ---
 
-## 📸 Screenshot
 
-> _Add a file named `screenshot.png` in your repo root to display it here._
-
-![Weather App Screenshot](screenshot.png)
 
 ---
 
@@ -64,19 +60,19 @@ weather_app/
 
 ---
 
-setup_steps:
-  - step: "Clone the Repository"
-    commands:
+### ✅ Setup_Steps:
+  #### - Step 1: "Clone the Repository"
+    Commands:
       - git clone https://github.com/Avinash-Singh-13/Weather-Forecast-System.git
       - cd Weather-Forecast-System
-    notes: "Or download the ZIP and extract it manually."
+    Notes: "Or download the ZIP and extract it manually."
 
-  - step: "Create a Virtual Environment"
-    commands:
+  #### - Step 2: "Create a Virtual Environment"
+    Commands:
       - python -m venv venv
-    notes: "This creates an isolated environment for Python packages."
+    Notes: "This creates an isolated environment for Python packages."
 
-  - step: "Activate the Virtual Environment"
+  #### - Step 3: "Activate the Virtual Environment"
     os_specific:
       windows:
         - venv\\Scripts\\activate
@@ -84,36 +80,36 @@ setup_steps:
         - source venv/bin/activate
     notes: "You should see (venv) prefix in your terminal."
 
-  - step: "Install Required Packages"
-    commands:
+  #### - Step 4: "Install Required Packages"
+    Commands:
       - pip install flask requests
-    optional:
+    Optional:
       - pip freeze > requirements.txt
-    notes: "This installs Flask and the HTTP library `requests`."
+    Notes: "This installs Flask and the HTTP library `requests`."
 
-  - step: "Configure OpenWeatherMap API Key"
-    instructions:
+  #### - Step 5: "Configure OpenWeatherMap API Key"
+    Instructions:
       - "Go to https://openweathermap.org/api"
       - "Create an account and get your API key"
       - "Open templates/weather_app.html"
       - "Find the line: const API_KEY = 'your_openweathermap_api_key';"
       - "Replace it with your actual API key"
-    notes: "Do not commit your actual API key to GitHub."
+    Notes: "Do not commit your actual API key to GitHub."
 
-  - step: "Run the Flask Application"
-    commands:
+  #### - Step 6: "Run the Flask Application"
+    Commands:
       - python app.py
-    expected_output: "Running on http://127.0.0.1:5000/"
+    Expected_Output: "Running on http://127.0.0.1:5000/"
 
-  - step: "Open in Browser"
+  #### - Step 7: "Open in Browser"
     url: "http://127.0.0.1:5000"
-    test_cases:
+    Test_Cases:
       - "Search for a city (e.g., Delhi)"
       - "Use the location button"
       - "Check forecast and map visibility"
 
-  - step: "Troubleshooting Tips"
-    issues:
+  #### - Step 8: "Troubleshooting Tips"
+    Issues:
       - problem: "ModuleNotFoundError for Flask"
         solution: "Run pip install flask requests"
       - problem: "'python' not recognized"
@@ -123,7 +119,7 @@ setup_steps:
       - problem: "Map not displaying"
         solution: "Set CSS height for map container and use map.invalidateSize()"
 
-  - step: "Add a .gitignore (Optional)"
+  #### - Step 9: "Add a .gitignore (Optional)"
     file: ".gitignore"
     contents: |
       __pycache__/
@@ -132,9 +128,9 @@ setup_steps:
       venv/
       .env
       .vscode/
-    commands:
+    Commands:
       - git add .gitignore
       - git commit -m "Add .gitignore"
       - git push
-    notes: "Helps avoid uploading unnecessary files to GitHub."
+    Notes: "Helps avoid uploading unnecessary files to GitHub."
 
